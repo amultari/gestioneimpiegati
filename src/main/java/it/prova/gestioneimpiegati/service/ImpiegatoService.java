@@ -13,7 +13,7 @@ public interface ImpiegatoService {
 
 	public void inserisciNuovo(Impiegato impiegatoInstance);
 
-	public void rimuovi(Impiegato impiegatoInstance);
+	public void rimuovi(Long idImpiegato);
 	
 	public List<Impiegato> findByExample(Impiegato example);
 	

@@ -47,8 +47,8 @@ public class ImpiegatoServiceImpl implements ImpiegatoService {
 
 	@Override
 	@Transactional
-	public void rimuovi(Impiegato impiegatoInstance) {
-		repository.delete(impiegatoInstance);
+	public void rimuovi(Long idImpiegato) {
+		repository.deleteById(idImpiegato);
 	}
 
 	@Override
