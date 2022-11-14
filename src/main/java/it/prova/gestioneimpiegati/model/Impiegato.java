@@ -22,23 +22,23 @@ public class Impiegato {
 	@Column(name = "id")
 	private Long id;
 
-	@NotBlank(message = "{nome.notblank}")
+	@NotBlank(message = "{impiegato.nome.notblank}")
 	@Column(name = "nome")
 	private String nome;
 
-	@NotBlank(message = "{cognome.notblank}")
+	@NotBlank(message = "{impiegato.cognome.notblank}")
 	@Column(name = "cognome")
 	private String cognome;
 
-	@NotBlank(message = "{matricola.notblank}")
+	@NotBlank(message = "{impiegato.matricola.notblank}")
 	@Column(name = "matricola")
 	private String matricola;
 
-	@NotNull(message = "{dataDiNascita.notnull}")
+	@NotNull(message = "{impiegato.dataDiNascita.notnull}")
 	@Column(name = "datadinascita")
 	private Date dataDiNascita;
 
-	@NotNull(message = "{stato.notblank}")
+	@NotNull(message = "{impiegato.stato.notblank}")
 	@Column(name = "stato")
 	@Enumerated(EnumType.STRING)
 	private StatoImpiegato stato;
