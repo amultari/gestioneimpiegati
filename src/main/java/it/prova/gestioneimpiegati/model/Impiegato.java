@@ -1,6 +1,6 @@
 package it.prova.gestioneimpiegati.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -36,7 +36,7 @@ public class Impiegato {
 
 	@NotNull(message = "{impiegato.dataDiNascita.notnull}")
 	@Column(name = "datadinascita")
-	private Date dataDiNascita;
+	private LocalDate dataDiNascita;
 
 	@NotNull(message = "{impiegato.stato.notblank}")
 	@Column(name = "stato")
@@ -75,11 +75,11 @@ public class Impiegato {
 		this.matricola = matricola;
 	}
 
-	public Date getDataDiNascita() {
+	public LocalDate getDataDiNascita() {
 		return dataDiNascita;
 	}
 
-	public void setDataDiNascita(Date dataDiNascita) {
+	public void setDataDiNascita(LocalDate dataDiNascita) {
 		this.dataDiNascita = dataDiNascita;
 	}
 

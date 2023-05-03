@@ -61,7 +61,10 @@
 											<td>${impiegatoItem.nome }</td>
 											<td>${impiegatoItem.cognome }</td>
 											<td>${impiegatoItem.matricola }</td>
-											<td><fmt:formatDate type = "date" value = "${impiegatoItem.dataDiNascita }" /></td>
+											<td>
+												<fmt:parseDate value="${impiegatoItem.dataDiNascita}" pattern="yyyy-MM-dd" var="localDateToBeParsed" type="date"/>
+												<fmt:formatDate pattern="dd/MM/yyyy" value="${localDateToBeParsed}" />
+											</td>
 											<td>${impiegatoItem.stato }</td>
 											<td>
 												<a class="btn  btn-sm btn-outline-secondary" href="${pageContext.request.contextPath}/impiegato/show/${impiegatoItem.id }">Visualizza</a>

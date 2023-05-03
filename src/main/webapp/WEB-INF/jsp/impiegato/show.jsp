@@ -48,7 +48,10 @@
 					    	
 					    	<dl class="row">
 							  <dt class="col-sm-3 text-right">Data di Nascita:</dt>
-							  <dd class="col-sm-9"><fmt:formatDate type="date" value = "${show_impiegato_attr.dataDiNascita}" /></dd>
+							  <dd class="col-sm-9">
+							  	<fmt:parseDate value="${show_impiegato_attr.dataDiNascita}" pattern="yyyy-MM-dd" var="localDateToBeParsed" type="date"/>
+								<fmt:formatDate pattern="dd/MM/yyyy" value="${localDateToBeParsed}" />
+							  </dd>
 					    	</dl>
 					    	
 					    	<dl class="row">
